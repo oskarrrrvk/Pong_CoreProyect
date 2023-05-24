@@ -38,12 +38,16 @@ The code is made up of:
   1. ***Structures:***
 
      1. t_DISPLAY defines:
-     2. t_PADDLE defines:
+        1. The enable display pin
+        2. score in that display   
+     3. t_PADDLE defines:
         1. The position on the matrix with paddle_In ('1' send Voltage) and paddle_Out ('0' close the circuit)
-        2. The position of the paddle in the program
+        2. The position of the paddle in the program (virtual position)
         3. The value of the joystick.
-     2. t_BALL defines:
-     
+     4. t_BALL defines:
+        1. The position on the matrix with position_X('1' send Voltage) adn position_Y ('0' close the circuit)
+        2. The direction that the ball follows
+        3. The position of the ball in the program (virtual position)
   3. ***Constants:***
      1. leds_7seg define the pin used for give the information to the display
      
