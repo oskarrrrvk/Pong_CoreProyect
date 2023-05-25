@@ -78,6 +78,6 @@ The code is made up of:
      9. printScore(int score): prints the score in the display, its only print cero, one, two, three
      10.isWin(): returns true if any score is 3 or false if anyones is 3
 
-##Conclusion
+## Conclusion
 To conclude the objetive of this proyect is teach about programming in a microcontroller like Arduino although the code is deficiency and it can be 
 improvable. Despite the code can be better, the proyect has hardware complexity that is interesting to analise.
