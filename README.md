@@ -1,10 +1,10 @@
 # Pong_CoreProyect
 ## Context
-The propose of this proyect was a didactic way to learn about hardware manage with a microcontroller and distract yourselfs. 
-In this document I am going to explain all the elements that I used and the code that I wrote.
+The propose of this project was a didactic way to learn about hardware managent by microcontrollers and distract yourselfs. 
+In this document I am going to explain all the elements used and the code wrote.
 
 ## element's list
-The elements that are used for this proyect are:
+The elements that were used for this proyect:
   1. 8x8 led matrix (the used matrix: [1088AS](https://pdf1.alldatasheet.com/datasheet-pdf/view/1179268/ETC/1088AS.html)(optional))
   3. [74HC595 x2](https://pdf1.alldatasheet.com/datasheet-pdf/view/12198/ONSEMI/74HC595.html)
   4. A 4 digit 7 segment display (the used display: [SH5461AS](https://www.datasheet-pdf.info/attach/1/2118861884.pdf))
@@ -14,16 +14,17 @@ The elements that are used for this proyect are:
   8. Arduino Uno R3 microcontroller
 
 ## hardware connections
-Fristly, the matrix an the chips are put on one of the boards, then you connect the pin according to the led matrix datasheet, the connection depends of the 
-matrix that it choose although the first pin is the left part of the serial number. Also, the joysticks can be placed there, the pins that are used for the
-joystick are: VCC(5V),GND and VRx or VRy (we only move the paddles in only one direction). Additionally, the 74HC595 is formed by a flip-flop register and 
-latch register. That means the information it loads when the clock change on  a high clock cycle from a serial input, and when the latch clock is high the 
-second register load the elements on parallel, and when the clock signal is low, it does not change nothing.
+Fristly, the matrix an the chips were put on one of the boards, then you connect the pin according to the led matrix datasheet, the connection depends of the 
+matrix that it choose. Although, in general the first pin is on the left part of the serial number. Also, the joysticks can be placed there. The pins that are used for the joystick are: VCC(5V),GND and VRx or VRy (we only move the paddles in only one direction). Additionally, 
+
+/**
+I have to modify this.
+the 74HC595 is formed by a 
+flip-flop register and latch register. That means the information it loads when the clock change on  a high clock cycle from a serial input, and when the latch clock is high the second register load the elements on parallel, and when the clock signal is low, it does not change nothing.
+*/
 
 In addition of this, in the other Bread Board is placed the display with two resistors, the resistors are conected to the display select to enable the digit.
-In this case the second and the third digit are employed, that there are the eighth and ninth pin, be careful, the display enable works with a low signal, and
-the segments works in high level, they are diodes, that means that the display work when the circuit is close and they have more voltage in the cathode than
-in the anode and the diode threshold, in other works, it woks when the circuit has current and 3.3V. 
+In this case the second and the third digit are employed, that there are the eighth and ninth pin, be careful, the display enable works with a low signal, and the segments works in high level, they are diodes, that means that the display work when the circuit is close and they have more voltage in the cathode than in the anode and the diode threshold, in other works, it woks when the circuit has current and 3.3V. 
 
 Lastly, we conect on the arduino board:
   1. Serial data inputs of the two registers in the second and the fifth pin
